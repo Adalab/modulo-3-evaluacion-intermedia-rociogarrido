@@ -1,5 +1,6 @@
 import React from "react";
 import "../stylesheets/PokeCard.scss";
+import PropTypes from "prop-types";
 
 const PokeCard = (props) => {
   const renderCards = props.pokemon.types.map((type, index) => {
@@ -20,6 +21,12 @@ const PokeCard = (props) => {
       <ul className="types">{renderCards}</ul>
     </article>
   );
+};
+
+PokeCard.propTypes = {
+  types: PropTypes.arrayOf(PropTypes.string),
+  url: PropTypes.string,
+  name: PropTypes.string,
 };
 
 export default PokeCard;

@@ -4,9 +4,10 @@ import data from "../data/data.json";
 import "../stylesheets/App.scss";
 
 const App = () => {
+  const list = useState(data);
   return (
     <>
-      <PokeList list={data} />;
+      <PokeList data={list} />;
     </>
   );
 };

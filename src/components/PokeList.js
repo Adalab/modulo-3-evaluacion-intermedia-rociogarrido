@@ -1,6 +1,7 @@
 import React from "react";
 import PokeCard from "./PokeCard";
 import "../stylesheets/PokeList.scss";
+import PropTypes from "prop-types";
 
 const PokeList = (props) => {
   const pokemonList = props.list.map((pokemon) => {
@@ -16,6 +17,10 @@ const PokeList = (props) => {
       <ul className="container">{pokemonList}</ul>
     </div>
   );
+};
+
+PokeCard.propTypes = {
+  id: PropTypes.number,
 };
 
 export default PokeList;
